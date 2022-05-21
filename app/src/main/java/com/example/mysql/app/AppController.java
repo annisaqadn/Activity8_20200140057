@@ -18,7 +18,7 @@ public class AppController extends Application {
         super.onCreate();
         mInstance = this;
     }
-    public static synchronized AppController getmInstance() {
+    public static synchronized AppController getInstance() {
         return mInstance;
     }
 

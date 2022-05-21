@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
+                adapter.notifyDataSetChanged();;
             }
         }, new Response.ErrorListener() {
             @Override
