@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Teman> temanArrayList = new ArrayList<>();
 
     private static final String TAG = MainActivity.class.getSimpleName();
-    private static String url_select = "http://10.0.2.2/umyTI/bacateman.php";
+    private static String url_select = "https://20200140057.praktikumtiumy.com/bacateman.php";
     public static final String TAG_ID   = "id";
     public static final String TAG_NAMA   = "nama";
     public static final String TAG_TELPON   = "telpon";
@@ -74,8 +74,8 @@ public class MainActivity extends AppCompatActivity {
                         Teman item = new Teman();
 
                         item.setId(obj.getString(TAG_ID));
-                        item.setId(obj.getString(TAG_NAMA));
-                        item.setId(obj.getString(TAG_TELPON));
+                        item.setNama(obj.getString(TAG_NAMA));
+                        item.setTelpon(obj.getString(TAG_TELPON));
 
                         //menambah item ke array
                         temanArrayList.add(item);
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-                adapter.notifyDataSetChanged();;
+                adapter.notifyDataSetChanged();
             }
         }, new Response.ErrorListener() {
             @Override
